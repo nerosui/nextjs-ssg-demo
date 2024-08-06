@@ -1,6 +1,6 @@
 "use client";
 
-import { AnyMxRecord } from "dns";
+import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 
 const PostList = () => {
@@ -17,7 +17,7 @@ const PostList = () => {
   
   return <>{posts?.map((post:any)=>{
     return (
-      <a href={`/post?id=${post?.id}`}
+      <Link href={`/post?id=${post?.id}`}
         key={post?.id}
         className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
       >
@@ -30,7 +30,7 @@ const PostList = () => {
             -&gt;
           </span>
         </div>
-      </a>
+      </Link>
     );
   })}</>;
 };
