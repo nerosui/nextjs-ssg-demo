@@ -1,8 +1,8 @@
 import Image from "next/image";
 import PostList from "./postList";
 
-import { basePath } from "../../next.config.mjs" // 追加
-const BASE_PATH = basePath ? basePath : "" // 追加
+import nextConfig from "../../next.config.mjs"; // 追加
+const BASE_PATH = nextConfig?.basePath || "" // 追加
 
 export default function Home() {
   return (
